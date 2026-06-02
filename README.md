@@ -9,12 +9,12 @@ Este projeto foi desenvolvido como material prático para uma apresentação de 
 - **Atividade 3:** Transformação geométrica da imagem através de rotação (90 graus) para demonstrar a manipulação de eixos e metadados de layout.
 - **Atividade 4:** Criação de um pipeline automatizado que recebe uma imagem bruta e exporta a versão tratada de forma transparente e rápida.
 
-## 🛠️ Tecnologias
+## Tecnologias
 - **Linguagem:** Python 3
 - **Bibliotecas:** Pillow (PIL - Python Imaging Library)
 - **Saída:** Arquivos de imagem processados (JPG/PNG).
 
-## ⚙️ Configuração do ambiente
+## Configuração do ambiente
 O projeto utiliza **ambiente virtual (venv)** para isolamento de dependências.
 
 ### Instalação:
@@ -35,8 +35,8 @@ O projeto utiliza **ambiente virtual (venv)** para isolamento de dependências.
 
 - python manipulador_imagem.py
 
-## 📂 Estrutura de Arquivos
-
+## Estrutura de Arquivos
+```
 ├── .venv/                   # Ambiente virtual isolado com a biblioteca Pillow instalada
 ├── .gitignore               # Define arquivos que o Git deve ignorar
 ├── foto_original.jpg        # Imagem de entrada utilizada como teste para a apresentação
@@ -44,8 +44,8 @@ O projeto utiliza **ambiente virtual (venv)** para isolamento de dependências.
 ├── manipulador_imagem.py    # Código-fonte principal contendo as instruções da biblioteca Pillow
 ├── README.md                # Documentação descritiva
 └── requirements.txt         # Arquivo de dependências
-
+```
 ---
 
-### 🚧 Status do Projeto:
+### Status do Projeto:
 *Em andamento*
