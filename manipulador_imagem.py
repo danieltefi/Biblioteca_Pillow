@@ -3,6 +3,7 @@ from PIL import ImageFilter
 from PIL import ImageDraw
 from PIL import ExifTags
 from pillow_heif import register_heif_opener
+from PIL import ImageFont
 
 register_heif_opener() # biblioteca lê arquivos heic (necessário para a atividade 5)
 
@@ -14,7 +15,7 @@ imagem_pb = imagem_foto1.convert('L') # deixa a imagem em preto e branco (modo '
 imagem_pb.save('modificadas/resultado_pb.jpg')
 print('Imagem em preto e branco criada.')
 
-imagem_blur = imagem_foto1.filter(ImageFilter.BLUR) # aplica o desfoque (blur) na foto
+imagem_blur = imagem_foto1.filter(ImageFilter.GaussianBlur(radius=20)) # aplica o desfoque (blur) na foto
 imagem_blur.save('modificadas/resultado_blur.jpg')
 print('Imagem com blur criada.')
 
@@ -23,7 +24,12 @@ imagem_foto2 = Image.open('originais/foto2.jpg') # abre a foto
 
 desenhar = ImageDraw.Draw(imagem_foto2) # cria uma ferramenta para desenhar em cima da imagem
 
-desenhar.text((50, 50), 'PROPRIEDADE DA FATEC RC', fill='white') # escreve o texto na posição X=50, Y=50, na cor branca
+try: # carrega a fonte arial no tamanho 30
+    fonte = ImageFont.truetype("arial.ttf", 30)
+except IOError:
+    fonte = ImageFont.load_default() # caso não ache a arial, usa a padrão
+
+desenhar.text((50, 50), 'PROPRIEDADE DA FATEC RC', fill='white', font=fonte) # escreve o texto na posição X=50, Y=50, na cor branca
 
 imagem_foto2.save('modificadas/resultado_marca_dagua.jpg') # salva o resultado
 print('Marca d água adicionada com sucesso.')
