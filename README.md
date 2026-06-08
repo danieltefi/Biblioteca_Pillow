@@ -37,21 +37,31 @@ Garanta que possui todos os arquivos de imagem de teste listados na estrutura ab
 - python manipulador_imagem.py
 
 ## Estrutura de Arquivos
-```
-├── .venv/                  # Ambiente virtual isolado com a biblioteca Pillow instalada
+## Estrutura de Arquivos
+```text
+├── .venv/                  # Ambiente virtual isolado com as bibliotecas instaladas
 ├── .gitignore              # Define arquivos que o Git deve ignorar
-├── foto1.jpg               # Imagem utilizada para o filtro Blur e Preto e Branco (atividade 1)
-├── foto2.jpg               # Imagem utilizada para receber a marca d'água (atividade 2)
-├── frame1.jpg              # Frame 1 para a composição do GIF (atividade 3)
-├── frame2.jpg              # Frame 2 para a composição do GIF (atividade 3)
-├── frame3.jpg              # Frame 3 para a composição do GIF (atividade 3)
-├── fotoA.png               # Imagem A para conversão em lote (atividade 4)
-├── fotoB.png               # Imagem B para conversão em lote (atividade 4)
-├── fotoC.png               # Imagem C para conversão em lote (atividade 4)
-├── foto_celular.jpg        # Foto real com metadados para extração (atividade 5)
 ├── manipulador_imagem.py   # Código-fonte principal contendo as instruções da biblioteca Pillow
 ├── README.md               # Documentação descritiva do projeto
-└── requirements.txt        # Arquivo de dependências (Pillow)
+├── requirements.txt        # Arquivo de dependências (Pillow e pillow-heif)
+├── originais/              # PASTA DE ENTRADA: Imagens brutas para os testes
+│   ├── foto1.jpg           # Utilizada para o filtro Blur e Preto e Branco (atividade 1)
+│   ├── foto2.jpg           # Utilizada para receber a marca d'água (atividade 2)
+│   ├── frame1.png          # Frame 1 para a composição do GIF (atividade 3)
+│   ├── frame2.png          # Frame 2 para a composição do GIF (atividade 3)
+│   ├── frame3.png          # Frame 3 para a composição do GIF (atividade 3)
+│   ├── fotoA.png           # Imagem A para conversão em lote (atividade 4)
+│   ├── fotoB.png           # Imagem B para conversão em lote (atividade 4)
+│   ├── fotoC.png           # Imagem C para conversão em lote (atividade 4)
+│   └── foto_celular.heic   # Foto original do celular com metadados (atividade 5)
+└── modificadas/            # Pasta de sáida: Onde os resultados são salvos automaticamente
+    ├── resultado_pb.jpg
+    ├── resultado_blur.jpg
+    ├── resultado_marca_dagua.jpg
+    ├── animacao.gif
+    ├── fotoA.jpg
+    ├── fotoB.jpg
+    └── fotoC.jpg
 ```
 ---
 
