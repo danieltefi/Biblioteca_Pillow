@@ -182,3 +182,5 @@ cython_debug/
 
 *.jpg
 *.png
+*.gif
+*.heic
